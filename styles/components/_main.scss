@@ -1,0 +1,154 @@
+@import '../abstract/variables';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $dark-slate-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #home__page__success {
+        display: none;
+    }
+    
+    .home__page {
+        background-color: $white;
+        width: 375px;
+        // border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        transition: width .7s ease;
+
+        @media screen and (min-width: 1200px) {
+            width: 100%;
+            max-width: 970px;
+            height: 643px;
+            border-radius: 15px;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .img__section {
+            height: 33%;
+            background: url(../../assets/images/illustration-sign-up-mobile.png) no-repeat top center;
+            width: 100%;
+
+            @media screen and (min-width: 1200px) {
+                height: 593px;
+                width: 400px;
+                background: url(../../assets/images/illustration-sign-up-desktop.png) no-repeat center center;
+                margin: 0 25px 0 50px;
+                border-radius: 15px;
+            }
+        }
+
+        .text__section {
+            margin: 0 25px 0 25px;
+            @media screen and (min-width: 1200px) {
+                margin: 0 0 0 60px;
+            }
+
+            .text__title {
+                @include titleStyleConfig;
+                @media screen and (min-width: 1200px) {
+                    font-size: 3.5em;
+                }
+            }
+
+            .text__sub-title {
+                @include paragraphStyleConfig;
+            }
+
+            .list__container {
+
+                .list__achivments {
+                    display: flex;
+                    align-items: flex-start;
+
+                    .list__img {
+                        margin-right: 15px;
+                    }
+
+                    .list__txt {
+                        font-size: 1em;
+                        color: $dark-slate-grey;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            .form__container {
+                .form__text__container {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 15px;
+
+                    .form__text {
+                        //Generic configs to text
+                        font-size: .75em;
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                    }
+
+                    .form__text__title {
+                        color: $dark-slate-grey;
+                    }
+
+                    .form__text__error {
+                        display: none;
+                        color: $tomato;
+                    }
+                }
+
+                .form__input__email, .form__button {
+                    @include inputStyleConfig;
+                }
+
+                .form__input__email {
+                    max-width: 293px;
+                    border: 1.5px solid $grey;
+                    margin-bottom: 20px;
+                    padding: 0 15px 0 15px;
+                    color: $dark-slate-grey;
+
+                    &::placeholder {
+                        color: $grey;
+                    }
+
+                    @media screen and (min-width: 1200px) {
+                        max-width: 406.52px;
+
+                        &:focus {
+                            border: 2px solid $dark-slate-grey;
+                        }
+                    }
+                }
+
+                .form__input__email__error {
+                    background-color: $error-bg-color;
+                    border: 2px solid $tomato;
+                    color: $tomato;
+
+                    &::placeholder {
+                        color: $tomato;
+                    }
+                }
+
+                .form__button {
+                    @include btnStyleConfig;
+                    margin: 0 0 25px 0;
+
+                    @media screen and (min-width: 1200px) {
+                        max-width: 100%;
+
+                        &:hover {
+                            @include hoverBtnDesktopConfig;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

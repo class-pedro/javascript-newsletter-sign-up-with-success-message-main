@@ -1,0 +1,245 @@
+body, ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(234, 29%, 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #home__page__success {
+  display: none;
+}
+body .home__page {
+  background-color: hsl(0, 0%, 100%);
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: width 0.7s ease;
+}
+@media screen and (min-width: 1200px) {
+  body .home__page {
+    width: 100%;
+    max-width: 970px;
+    height: 643px;
+    border-radius: 15px;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+body .home__page .img__section {
+  height: 33%;
+  background: url(../assets/images/illustration-sign-up-mobile.png) no-repeat top center;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  body .home__page .img__section {
+    height: 593px;
+    width: 400px;
+    background: url(../assets/images/illustration-sign-up-desktop.png) no-repeat center center;
+    margin: 0 25px 0 50px;
+    border-radius: 15px;
+  }
+}
+body .home__page .text__section {
+  margin: 0 25px 0 25px;
+}
+@media screen and (min-width: 1200px) {
+  body .home__page .text__section {
+    margin: 0 0 0 60px;
+  }
+}
+body .home__page .text__section .text__title {
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: hsl(234, 29%, 20%);
+}
+@media screen and (min-width: 1200px) {
+  body .home__page .text__section .text__title {
+    font-size: 3.5em;
+  }
+}
+body .home__page .text__section .text__sub-title {
+  font-size: 1em;
+  color: hsl(234, 29%, 20%);
+}
+body .home__page .text__section .list__container .list__achivments {
+  display: flex;
+  align-items: flex-start;
+}
+body .home__page .text__section .list__container .list__achivments .list__img {
+  margin-right: 15px;
+}
+body .home__page .text__section .list__container .list__achivments .list__txt {
+  font-size: 1em;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 15px;
+}
+body .home__page .text__section .form__container .form__text__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+body .home__page .text__section .form__container .form__text__container .form__text {
+  font-size: 0.75em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+body .home__page .text__section .form__container .form__text__container .form__text__title {
+  color: hsl(234, 29%, 20%);
+}
+body .home__page .text__section .form__container .form__text__container .form__text__error {
+  display: none;
+  color: hsl(4, 100%, 67%);
+}
+body .home__page .text__section .form__container .form__input__email, body .home__page .text__section .form__container .form__button {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+}
+body .home__page .text__section .form__container .form__input__email {
+  max-width: 293px;
+  border: 1.5px solid hsl(231, 7%, 60%);
+  margin-bottom: 20px;
+  padding: 0 15px 0 15px;
+  color: hsl(234, 29%, 20%);
+}
+body .home__page .text__section .form__container .form__input__email::-moz-placeholder {
+  color: hsl(231, 7%, 60%);
+}
+body .home__page .text__section .form__container .form__input__email::placeholder {
+  color: hsl(231, 7%, 60%);
+}
+@media screen and (min-width: 1200px) {
+  body .home__page .text__section .form__container .form__input__email {
+    max-width: 406.52px;
+  }
+  body .home__page .text__section .form__container .form__input__email:focus {
+    border: 2px solid hsl(234, 29%, 20%);
+  }
+}
+body .home__page .text__section .form__container .form__input__email__error {
+  background-color: hsla(4, 100%, 78%, 0.568);
+  border: 2px solid hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+}
+body .home__page .text__section .form__container .form__input__email__error::-moz-placeholder {
+  color: hsl(4, 100%, 67%);
+}
+body .home__page .text__section .form__container .form__input__email__error::placeholder {
+  color: hsl(4, 100%, 67%);
+}
+body .home__page .text__section .form__container .form__button {
+  border: none;
+  max-width: 325px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 0.95em;
+  padding: 0;
+  cursor: pointer;
+  margin: 0 0 25px 0;
+}
+@media screen and (min-width: 1200px) {
+  body .home__page .text__section .form__container .form__button {
+    max-width: 100%;
+  }
+  body .home__page .text__section .form__container .form__button:hover {
+    background-image: linear-gradient(to right, hsl(4, 100%, 67%), hsl(4, 100%, 67%), #ff683f);
+    box-shadow: 0 15px 30px hsla(4, 100%, 67%, 0.573);
+  }
+}
+
+.success__message {
+  background-color: hsl(0, 0%, 100%);
+  width: 375px;
+  transition: width 0.7s ease;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+@media screen and (min-width: 1200px) {
+  .success__message {
+    height: 545px;
+    width: 500px;
+    border-radius: 35px;
+    justify-content: center;
+  }
+}
+.success__message .success__content {
+  margin: 25px;
+}
+@media screen and (min-width: 1200px) {
+  .success__message .success__content {
+    margin: 50px;
+  }
+}
+.success__message .success__img {
+  width: 80px;
+  margin: 100px 0 25px 0;
+}
+@media screen and (min-width: 1200px) {
+  .success__message .success__img {
+    margin: 0 0 30px 0;
+  }
+}
+.success__message .success__message__title {
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: hsl(234, 29%, 20%);
+}
+@media screen and (min-width: 1200px) {
+  .success__message .success__message__title {
+    font-size: 3.5em;
+    margin: 0 0 30px 0;
+  }
+}
+.success__message .success__text {
+  font-size: 1em;
+  color: hsl(234, 29%, 20%);
+  line-height: 25px;
+  margin: 0 0 300px 0;
+}
+@media screen and (min-width: 1200px) {
+  .success__message .success__text {
+    margin: 0 0 50px 0;
+  }
+}
+.success__message .success__text .success__user__mail {
+  font-weight: 700;
+}
+.success__message .success__dismiss__btn {
+  border: none;
+  max-width: 325px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 0.95em;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+}
+@media screen and (min-width: 1200px) {
+  .success__message .success__dismiss__btn {
+    max-width: 100%;
+  }
+  .success__message .success__dismiss__btn:hover {
+    background-image: linear-gradient(to right, hsl(4, 100%, 67%), hsl(4, 100%, 67%), #ff683f);
+    box-shadow: 0 15px 30px hsla(4, 100%, 67%, 0.573);
+  }
+}/*# sourceMappingURL=style.css.map */

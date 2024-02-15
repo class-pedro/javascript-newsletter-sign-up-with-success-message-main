@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+
+  <main class="main__container">
+
+    <section id="" class="home__page"> <!-- Id to disable home page display: home__page__success -->
+      <section class="img__section">
+      </section>
+      <section class="text__section">
+        <h1 class="text__title">Stay updated!</h1>
+        <p class="text__sub-title">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="list__container">
+          <li class="list__achivments">
+            <img src="assets/images/icon-list.svg" alt="Red circle contains a white 'ok' sign" class="list__img"> <span class="list__txt">
+              Product discovery and
+              building what matters
+            </span>
+          </li>
+          <li class="list__achivments">
+            <img src="assets/images/icon-list.svg" alt="Red circle contains a white 'ok' sign" class="list__img"> <span class="list__txt">
+              Measuring to ensure
+              updates are a success
+            </span>
+          </li>
+          <li class="list__achivments">
+            <img src="assets/images/icon-list.svg" alt="Red circle contains a white 'ok' sign" class="list__img"> <span class="list__txt">And much more!</span>
+          </li>
+        </ul>
+        <form id="form" class="form__container" novalidate>
+          <div class="form__text__container">
+            <p class="form__text form__text__title">Email address</p>
+            <p class="form__text form__text__error">Valid email required</p>
+          </div>
+          <input type="email" name="email" id="email" class="form__input__email" placeholder="email@company.com" autocomplete="off">
+          <input type="submit" value="Subscribe to monthly newsletter" class="form__button">
+        </form>
+      </section>
+    </section>
+
+    <section class="success__message">
+      <section class="success__content">
+        <img src="assets/images/icon-success.svg" alt="Circle contains a ''ok'' sign" class="success__img">
+
+        <h1 class="success__message__title">Thanks for subscribing!</h1>
+
+        <p class="success__text">A confirmation email has been sent to <span class="success__user__mail">email@companyname.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+
+        <button class="success__dismiss__btn">Dismiss message</button>
+      </section>
+    </section>
+
+  </main>
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

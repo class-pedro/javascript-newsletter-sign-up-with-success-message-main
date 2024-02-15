@@ -1,0 +1,74 @@
+@import '../abstract/variables';
+
+.success__message {
+        background-color: $white;
+        width: 375px;
+        transition: width .7s ease;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+
+        @media screen and (min-width: 1200px) {
+            height: 545px;
+            width: 500px;
+            border-radius: 35px;
+            justify-content: center;
+        }
+
+        .success__content {
+            margin: 25px;
+
+            @media screen and (min-width: 1200px) {
+                margin: 50px;
+            }
+        }
+
+        .success__img {
+            width: 80px;
+            margin: 100px 0 25px 0;
+
+            @media screen and (min-width: 1200px) {
+                margin: 0 0 30px 0;
+            }
+        }
+
+        .success__message__title {
+            @include titleStyleConfig;
+
+            @media screen and (min-width: 1200px) {
+                font-size: 3.5em;
+                margin: 0 0 30px 0;
+            }
+        }
+
+        .success__text {
+            @include paragraphStyleConfig;
+            line-height: 25px;
+            margin: 0 0 300px 0;
+
+            @media screen and (min-width: 1200px) {
+                margin: 0 0 50px 0;
+            }
+
+            .success__user__mail {
+                font-weight: 700;
+            }
+        }
+
+        .success__dismiss__btn {
+            @include btnStyleConfig;
+            @include inputStyleConfig;
+
+            @media screen and (min-width: 1200px) {
+                max-width: 100%;
+
+                &:hover {
+                    @include hoverBtnDesktopConfig;
+                }
+            }
+        }
+}
+
+// Config Breakpoint
+// @media only screen and (min-width: 768px) {...}

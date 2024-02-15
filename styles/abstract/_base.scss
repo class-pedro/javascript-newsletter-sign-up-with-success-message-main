@@ -1,0 +1,11 @@
+@import './variables';
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-family: $font-roboto;
+}
+
+li {
+    list-style: none;
+}
